@@ -24,3 +24,7 @@ terraform {
 module "objects" {
   source = "./objects"
 }
+
+module "gcp" {
+  source = "./gcp"
+}
