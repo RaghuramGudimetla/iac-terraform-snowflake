@@ -35,3 +35,7 @@ module "objects" {
 module "gcp" {
   source = "./gcp"
 }
+
+module "unloading_data" {
+  source = "./unloading_data"
+}
