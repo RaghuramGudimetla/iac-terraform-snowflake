@@ -13,6 +13,13 @@ provider "snowflake" {
   username = var.user
 }
 
+provider "snowflake" {
+  account = var.account
+  role = "ACCOUNTADMIN"
+  username = var.user
+  alias = "accountadmin"
+}
+
 terraform {
     backend "s3" {
     bucket = "iac-terraform-instances"
@@ -27,4 +34,8 @@ module "objects" {
 
 module "gcp" {
   source = "./gcp"
+}
+
+module "unloading_data" {
+  source = "./unloading_data"
 }
