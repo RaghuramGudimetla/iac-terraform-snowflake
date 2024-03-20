@@ -39,3 +39,7 @@ module "gcp" {
 module "unloading_data" {
   source = "./unloading_data"
 }
+
+module "covid" {
+  source = "./covid"
+}
